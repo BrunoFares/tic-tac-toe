@@ -1,3 +1,5 @@
+const div = document.querySelectorAll('div.gameboard div');
+
 const Gameboard = (function() {
     const row = 3;
     const column = 3;
@@ -80,4 +82,21 @@ const gameReset = function() {
         }
     }
     return Gameboard;
+}
+
+for (let i = 0; i < div.length; i++) {
+    div[i].addEventListener('click', () => {
+        let row = 2, column = 0;
+
+        while ((3 * row) + column != i) {
+            if (3 * row > i) {
+                row -= 1;
+                column += 1;
+            } else if (3 * row < i) {
+                column += 1;
+            }
+        }
+
+        inputToBoard(1, [row, column])
+    });
 }
