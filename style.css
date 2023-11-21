@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+div.gameboard {
+    width: 33rem;
+    height: 33rem;
+    display: grid;
+    grid-template: repeat(3, 11rem) / repeat(3, 11rem);
+    margin: 0 auto;
+}
+
+div {
+    border: 5px solid black;
+    display: flex;
+}
+
+p {
+    margin: auto auto;
+    box-sizing: border-box;
+    font-size: 7rem;
+    height: 9rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+}

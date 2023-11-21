@@ -17,7 +17,7 @@ function inputToBoard(player, move) {
     let input;
 
     if (player === 1) input = 'x';
-    else if (player === 2) input = '0';
+    else if (player === 2) input = 'o';
 
     if (Gameboard[move[0]][move[1]] === "") Gameboard[move[0]][move[1]] = input;
     else console.log("This cell has already been played in.")
@@ -34,7 +34,7 @@ const gridIsComplete = function() {
     return true;
 }
 
-const Game = function() {
+const gameWin = function() {
     let sign = "";
     for (let i = 0; i < 3; i++) {
         for (let j = 0; j < 2; j++) {
@@ -44,7 +44,7 @@ const Game = function() {
                 break;
             }
         }
-        if (sign === 'x' || sign === '0') return ("player win");
+        if (sign === 'x' || sign === 'o') return ("player win");
     }
 
     for (let i = 0; i < 3; i++) {
@@ -55,7 +55,7 @@ const Game = function() {
                 break;
             }
         }
-        if (sign === 'x' || sign === '0') return ("player win");
+        if (sign === 'x' || sign === 'o') return ("player win");
     }
 
     if (Gameboard[0][0] === Gameboard[1][1]) {
