@@ -9,9 +9,10 @@ div.gameboard {
     display: grid;
     grid-template: repeat(3, 11rem) / repeat(3, 11rem);
     margin: 0 auto;
+    border: 5px solid black;
 }
 
-div {
+div.gameboard div {
     border: 5px solid black;
     display: flex;
 }
@@ -26,4 +27,17 @@ p {
 h1 {
     text-align: center;
     font-size: 3rem;
+}
+
+div.result {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+}
+
+button {
+    margin: 0 auto;
 }
